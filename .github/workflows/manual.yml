@@ -3,7 +3,7 @@ name: Deploy to Surge
 on:
   push:
     branches:
-      - tahelbranch
+      - main
 
 jobs:
   deploy:
@@ -16,12 +16,16 @@ jobs:
       - name: Install Node.js and npm
         uses: actions/setup-node@v2
         with:
-          node-version: '14' 
+          node-version: '14'  
 
       - name: Install surge
-        run: npm install -g surge 
+        run: npm install -g surge
+
+      - name: Build the app (if needed)
+        run: npm install  
 
       - name: Deploy to Surge
         run: |
           echo "Deploying to Surge.sh..."
-          surge --project C:\Users\marco-s\Desktop\tahelfolder\ --domain tahelbieber.surge.sh
+          surge --project C:\Users\marco-s\Desktop\tahelfolder\ --domain tahelb.surge.sh
+
