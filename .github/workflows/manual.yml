@@ -13,8 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build the app (if needed)
-        run: npm install  
       - name: Deploy to Surge
         run: |
           echo "Deploying to Surge.sh..."
