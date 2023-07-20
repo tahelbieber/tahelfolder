@@ -21,11 +21,13 @@ jobs:
       - name: Install surge
         run: npm install -g surge
 
-      - name: Build the app (if needed)
+      - name: Build the app 
         run: npm install  
 
       - name: Deploy to Surge
         run: |
           echo "Deploying to Surge.sh..."
           surge --project C:\Users\marco-s\Desktop\tahelfolder\ --domain tahelb.surge.sh
+
+
 
