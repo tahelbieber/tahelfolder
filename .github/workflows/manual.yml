@@ -19,10 +19,7 @@ jobs:
           node-version: '14'  
 
       - name: Install surge
-        run: npm install -g surge
-
-      - name: Build the app 
-        run: npm install  
+        run: npm install -g surge 
 
       - name: Deploy to Surge
         run: |
